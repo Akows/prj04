@@ -1,25 +1,22 @@
-import logo from './logo.svg';
+// CSS 파일을 import
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+// react-router-dom 라이브러리에서 BrowserRouter, Routes, Route 태그를 import
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
+// Route 태그를 사용하여 페이지 컴포넌트를 App.js에 연결
+import Main from './components/Main';
+
+const App = () => {
+	return (
+		<div className='App'>
+			<BrowserRouter>
+        <Routes>
+					<Route path="/" element={<Main/>}/>
+				</Routes>
+			</BrowserRouter>
+		</div>
+	);
+};
 
 export default App;
