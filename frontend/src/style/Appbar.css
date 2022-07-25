@@ -1,0 +1,144 @@
+/* 상단 영역 설정 */
+/* 상단 영역 설정 */
+.appbar-head {
+    width: 100%;
+    height: 10%;
+
+    border: 1px solid black;
+}
+    /* 상단 상층 영역 설정 */
+    /* 상단 상층 영역 설정 */
+    .appbar-head-upper {
+        width: 100%;
+        height: 50%;
+
+        display: flex;
+
+        border: 1px solid black;
+    }
+        /* 상단 상층 메뉴버튼 영역 설정 */
+        /* 상단 상층 메뉴버튼 영역 설정 */
+        .appbar-head-upper-menubtu {
+            width: 10%;
+            height: 100%;
+
+            border: 1px solid black;
+        }
+            /* 상단 상층 메뉴버튼 설정 */
+            /* 상단 상층 메뉴버튼 설정 */
+            .appbar-head-upper-button {
+                width: 70%;
+                height: 60%;
+
+                margin-top: 10px;
+
+                border-radius: 10px;
+
+                border: none;
+            }
+            /* 상단 하층 버튼 (hover) 설정 */
+            .appbar-head-upper-button:hover {
+                background-color: black;
+                color: white;
+            }
+            /* 상단 하층 버튼 (active) 설정 */
+            .appbar-head-upper-button:active {
+                background-color: black;
+                color: red;
+            }
+
+        /* 상단 상층 앱 제목 영역 설정 */
+        /* 상단 상층 앱 제목 영역 설정 */
+        .appbar-head-upper-apptitle {
+            width: 70%;
+            height: 100%;
+
+            border: 1px solid black;
+        }
+        /* 상단 상층 기타버튼 영역 설정 */
+        /* 상단 상층 기타버튼 영역 설정 */
+        .appbar-head-upper-etcbtu {
+            width: 20%;
+            height: 100%;
+
+            border: 1px solid black;
+        }
+            /* 상단 상층 기타버튼 설정 */
+            /* 상단 상층 기타버튼 설정 */
+            .appbar-head-upper-etcbutton {
+                width: 30%;
+                height: 60%;
+
+                margin-top: 10px;
+
+                border-radius: 10px;
+
+                border: none;
+            }
+            /* 상단 하층 버튼 (hover) 설정 */
+            .appbar-head-upper-etcbutton:hover {
+                background-color: black;
+                color: white;
+            }
+            /* 상단 하층 버튼 (active) 설정 */
+            .appbar-head-upper-etcbutton:active {
+                background-color: black;
+                color: red;
+            }
+
+    /* 상단 하층 영역 설정 */
+    /* 상단 하층 영역 설정 */
+    .appbar-head-lower {
+        width: 100%;
+        height: 50%;
+
+        display: flex;
+
+        border: 1px solid black;
+    }
+        /* 상단 하층 버튼 1 영역 설정 */
+        /* 상단 하층 버튼 1 영역 설정 */
+        .appbar-head-lower-area1 {
+            width: 40%;
+            height: 100%;
+
+            border: 1px solid black;
+        }
+        /* 상단 하층 버튼 2 영역 설정 */
+        /* 상단 하층 버튼 2 영역 설정 */
+        .appbar-head-lower-area2 {
+            width: 30%;
+            height: 100%;
+
+            border: 1px solid black;
+        }
+        /* 상단 하층 버튼 3 영역 설정 */
+        /* 상단 하층 버튼 3 영역 설정 */
+        .appbar-head-lower-area3 {
+            width: 30%;
+            height: 100%;
+
+            border: 1px solid black;
+        }
+            /* 상단 하층 버튼 설정 */
+            /* 상단 하층 버튼 설정 */
+            .appbar-head-lower-button {
+                width: 90%;
+                height: 60%;
+
+                margin-top: 10px;
+
+                border-radius: 10px;
+
+                border: none;
+            }
+            /* 상단 하층 버튼 (hover) 설정 */
+            .appbar-head-lower-button:hover {
+                background-color: black;
+                color: white;
+            }
+            /* 상단 하층 버튼 (active) 설정 */
+            .appbar-head-lower-button:active {
+                background-color: black;
+                color: red;
+            }
