@@ -1,0 +1,38 @@
+/* 본문 리스트 영역 설정 */
+/* 본문 리스트 영역 설정 */
+.itemcontainer-body-content-list {
+    width: 98%;  
+    height: 180px;
+
+    margin: 5px;
+
+    border-radius: 10px;
+
+    display: flex;
+
+    border: 1px solid black;
+}
+    /* 본문 리스트 텍스트 영역 설정 */
+    /* 본문 리스트 텍스트 영역 설정 */
+    .itemcontainer-body-content-list-text {
+        width: 75%;  
+        height: 95%;
+
+        margin: 3px;
+
+        border-radius: 10px;
+
+        border: 1px solid black;
+    }
+    /* 본문 리스트 포토 영역 설정 */
+    /* 본문 리스트 포토 영역 설정 */
+    .itemcontainer-body-content-list-photo {
+        width: 25%;  
+        height: 95%;
+
+        margin: 3px;
+
+        border-radius: 10px;
+
+        border: 1px solid black;
+    }

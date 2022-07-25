@@ -44,14 +44,14 @@ const Contentsbox = () => {
             {data && data.map(datas => {
                 return (
                     <div className='itemcontainer-body-content-list' key={datas}>
+                        <div className='itemcontainer-body-content-list-photo'>
+                            <img src={imgsrc} height="110" width='110' style={{borderRadius:'20px'}} alt='이미지 파일 오류!'/>
+                        </div>
+
                         <div className='itemcontainer-body-content-list-text'>
                             <Link to={`/${datas}`} state={{name: datas}} >
                                 {datas}
                             </Link>
-                        </div>
-
-                        <div className='itemcontainer-body-content-list-photo'>
-                            <img src={imgsrc} height="110" width='110' style={{borderRadius:'20px'}} alt='이미지 파일 오류!'/>
                         </div>
                     </div>
                 );

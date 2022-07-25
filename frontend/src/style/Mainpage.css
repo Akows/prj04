@@ -2,7 +2,7 @@
 /* 전체 영역 설정 */
 .main-outer {
     width: 600px;
-    height: 1200px;
+    height: auto;
 
     display: inline-flex;
     align-items: center;

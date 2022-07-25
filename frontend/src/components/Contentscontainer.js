@@ -1,4 +1,4 @@
-import "../style/Itemcontainer.css";
+import "../style/Contentscontainer.css";
 
 import Contentsbox from "./Contentsbox";
 
