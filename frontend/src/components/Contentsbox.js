@@ -45,15 +45,9 @@ const Contentsbox = () => {
                 return (
                     <div className='itemcontainer-body-content-list' key={datas}>
                         <div className='itemcontainer-body-content-list-text'>
-                            
-                            <Link to={`/${datas}`}>
+                            <Link to={`/${datas}`} state={{name: datas}} >
                                 {datas}
                             </Link>
-                            
-
-
-                            
-
                         </div>
 
                         <div className='itemcontainer-body-content-list-photo'>

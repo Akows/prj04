@@ -1,12 +1,16 @@
 import axios from 'axios';
 import React, { useState } from 'react';
+import { useLocation } from "react-router-dom";
 
 import "../style/Contents.css";
 
-const Contents = (name) => {
+const Contents = () => {
 
     const [data, setData] = useState(null);
 	const [error, setError] = useState(false);
+
+    const location = useLocation();
+	const name = location.state.name;
 
     React.useEffect(() => {
         axios
@@ -34,7 +38,8 @@ const Contents = (name) => {
             {data && data.map(datas => {
                 return (
                     <>
-                    {datas.name}
+                        {datas.name}
+                        {datas.vision}
                     </>
                 );
             })}
