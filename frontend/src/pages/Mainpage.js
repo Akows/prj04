@@ -3,18 +3,13 @@ import React from 'react';
 import "../style/Mainpage.css";
 
 import Appbar from '../components/Appbar';
-import Itemcontainer from '../components/Itemcontainer';
+import Contentscontainer from '../components/Contentscontainer';
 
 const Mainpage = () => {
 	return (
 			<div className='main-outer'>
-
 				<Appbar/>
-
-				<Itemcontainer>
-
-				</Itemcontainer>
-
+				<Contentscontainer/>
 			</div>
 		);
 	}
