@@ -6,6 +6,11 @@ import "../style/PublicCSS.css";
 import imgsrc from '../assets/genshin-impact-logo.png';
 
 const Loading = () => {
+
+    React.useEffect(() => {
+        console.log('Now Loading...');
+    });
+
     return (
         <div className='loading-outer'>
             <div className='loading-imgdiv'>

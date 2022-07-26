@@ -11,14 +11,13 @@ const Mainpage = () => {
 	const [loading, setLoading] = useState(true);
 
     React.useEffect(() => {
-
 		setTimeout(() => {
 			setLoading(false)
-		}, 1000)
+		}, 500)
     });
 
 	return loading ? <Loading/> :
-	(
+		(
 			<div className='main-outer'>
 				<Appbar/>
 				<Contentscontainer/>
