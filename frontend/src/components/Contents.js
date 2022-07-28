@@ -4,6 +4,26 @@ import { useLocation } from "react-router-dom";
 
 import "../style/Contents.css";
 
+import star1 from '../assets/Icon_1_Star.webp';
+import star2 from '../assets/Icon_2_Stars.webp';
+import star3 from '../assets/Icon_3_Stars.webp';
+import star4 from '../assets/Icon_4_Stars.webp';
+import star5 from '../assets/Icon_5_Stars.webp';
+
+import bow from '../assets/Icon_Bow.webp';
+import catalyst from '../assets/Icon_Catalyst.webp';
+import claymore from '../assets/Icon_Claymore.webp';
+import polearm from '../assets/Icon_Polearm.webp';
+import sword from '../assets/Icon_Sword.webp';
+
+import anemo from '../assets/Element_Anemo.svg';
+import cryo from '../assets/Element_Cryo.svg';
+import dendro from '../assets/Element_Dendro.svg';
+import electro from '../assets/Element_Electro.svg';
+import hydro from '../assets/Element_Hydro.svg';
+import pyro from '../assets/Element_Pyro.svg';
+import geo from '../assets/Element_Geo.svg';
+
 const Contents = () => {
 
     const [data, setData] = useState([]);
@@ -36,35 +56,130 @@ const Contents = () => {
         return '에러가 발생하였습니다.';
     }
 
-    var vision = '';
+    // 등급 이미지 체크
+    var raritysrc = '';
 
-    if (data.vision === 'Geo') {
-        vision = 'G';
+    if (data.rarity === 1) {
+        raritysrc = star1;
+    }
+    else if (data.rarity === 2) {
+        raritysrc = star2;
+    }
+    else if (data.rarity === 3) {
+        raritysrc = star3;
+    }
+    else if (data.rarity === 4) {
+        raritysrc = star4;
+    }
+    else if (data.rarity === 5) {
+        raritysrc = star5;
     }
 
-    console.log(data);
+    // 무기종류 이미지 체크
+    var weaponsrc = '';
 
-	return (
-        <>
-            <img src={imgsrc} height="110" width='110' style={{borderRadius:'20px'}} alt='이미지 파일 오류!'/>
+    if (data.weapon === 'Bow' || data.type === 'Bow') {
+        weaponsrc = bow;
+    }
+    else if (data.weapon === 'Catalyst' || data.type === 'Catalyst') {
+        weaponsrc = catalyst;
+    }
+    else if (data.weapon === 'Claymore' || data.type === 'Claymore') {
+        weaponsrc = claymore;
+    }
+    else if (data.weapon === 'Polearm' || data.type === 'Polearm') {
+        weaponsrc = polearm;
+    }
+    else if (data.weapon === 'Sword' || data.type === 'Sword') {
+        weaponsrc = sword;
+    }
 
-            <br/>
-            <br/>
+    // 캐릭터 속성 이미지 체크
+    var visionsrc = '';
 
-            {data.name}
+    if (data.vision === 'Anemo') {
+        visionsrc = anemo;
+    }
+    else if (data.vision === 'Cryo') {
+        visionsrc = cryo;
+    }
+    else if (data.vision === 'Dendro') {
+        visionsrc = dendro;
+    }
+    else if (data.vision === 'Electro') {
+        visionsrc = electro;
+    }
+    else if (data.vision === 'Hydro') {
+        visionsrc = hydro;
+    }
+    else if (data.vision === 'Pyro') {
+        visionsrc = pyro;
+    }
+    else if (data.vision === 'Geo') {
+        visionsrc = geo;
+    }
 
-            <br/>
-            <br/>
+    if (url === 'characters')
+    {
+        return (
+            <>
+                <div className='contents-body-outer'>
+                    <div className='contents-body-upper'>
+                        <div className='contents-body-imgrarity'>
+                            <img src={imgsrc} className='contents-body-imgrarity-img' alt='이미지 파일 오류!'/>
+                            <img src={raritysrc} className='contents-body-imgrarity-rarityimg'  alt='이미지 파일 오류!'/>
+                        </div>
 
-            {vision}
+                        <div className='contents-body-name'>
+                            {data.name} <br/>
+                            <img src={visionsrc} className='contents-body-imgrarity-elementimg' alt='이미지 파일 오류!'/>
+                            <img src={weaponsrc} className='contents-body-imgrarity-elementimg' alt='이미지 파일 오류!'/>
+                        </div>
+                    </div>
 
-            <br/>
-            <br/>
+                    <div className='contents-body-middle'>
+                        zz
+                    </div>
 
-            {data.affiliation}
+                    <div className='contents-body-lower'>
+                        zz
+                    </div>
 
-        </>
-	);
+                </div>
+            </>
+        );
+    }
+
+    if (url === 'weapons')
+    {
+        return (
+            <>
+                <div className='contents-body-outer'>
+                    <div className='contents-body-upper'>
+                        <div className='contents-body-imgrarity'>
+                            <img src={imgsrc} className='contents-body-imgrarity-img' alt='이미지 파일 오류!'/>
+                            <img src={raritysrc} className='contents-body-imgrarity-rarityimg'  alt='이미지 파일 오류!'/>
+                        </div>
+
+                        <div className='contents-body-name'>
+                            {data.name} <br/>
+                            <img src={weaponsrc} className='contents-body-imgrarity-elementimg' alt='이미지 파일 오류!'/>
+                        </div>
+                    </div>
+
+                    <div className='contents-body-middle'>
+                        zz
+                    </div>
+
+                    <div className='contents-body-lower'>
+                        zz
+                    </div>
+
+                </div>
+            </>
+        );
+    }
+
 }
 
 export default Contents;

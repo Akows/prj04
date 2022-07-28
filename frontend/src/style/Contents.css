@@ -1,0 +1,62 @@
+.contents-body-outer {
+    width: 100%;  
+    height: auto; 
+
+    /* border: 1px solid black; */
+}
+
+.contents-body-upper {
+    width: 100%;
+    height: 20%;
+
+    display: flex;
+
+    border: 1px solid black;
+}
+.contents-body-imgrarity {
+    width: 30%;
+    height: 100%;
+}
+.contents-body-imgrarity-img {
+    width: 150px;
+    height: 150px;
+
+    border-radius: 10px;
+}
+.contents-body-imgrarity-rarityimg {
+    width: 75px;
+    height: 20px;
+}
+
+.contents-body-name {
+    width: 70%;
+    height: 100%;
+
+    margin-top: 40px;
+
+    font-family: 'GIfont';
+    font-size: xx-large;
+    font-weight: bolder;
+}
+.contents-body-imgrarity-elementimg {
+    width: 80px;
+    height: 80px;
+}
+
+.contents-body-middle {
+    width: 100%;
+    height: 40%;
+
+    display: flex;
+
+    border: 1px solid black;
+}
+
+.contents-body-lower {
+    width: 100%;
+    height: 40%;
+
+    display: flex;
+
+    border: 1px solid black;
+}
