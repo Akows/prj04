@@ -1,8 +1,5 @@
 import React, { useState } from 'react';
 
-import "../style/Mainpage.css";
-
-import Appbar from '../components/Appbar';
 import CharactersInfo from '../components/CharactersInfo';
 import Loading from './Loading';
 
@@ -19,7 +16,6 @@ const Mainpage = () => {
 	return loading ? <Loading/> :
 		(
 			<div className='main-outer'>
-				<Appbar/>
 				<CharactersInfo/>
 			</div>
 		);

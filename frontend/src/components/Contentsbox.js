@@ -172,16 +172,19 @@ const Contentsbox = (props) => {
                     imgsrc = zhongliimg;
 
                 return (
-                    <div className='itemcontainer-body-content-list' key={datas}>
-                        <div className='itemcontainer-body-content-list-photo'>
-                            <img src={imgsrc} height="110" width='110' style={{borderRadius:'20px'}} alt='이미지 파일 오류!'/>
+                    <div className='itemcontainer-body-outer'>
+                        <Link to={`/${datas}`} state={{name: datas, imgsrc: imgsrc, url: props.url}} >
+                        <div className='itemcontainer-body-content-list' key={datas}>
+                            <div className='itemcontainer-body-content-list-photo'>
+                                <img src={imgsrc}  className='itemcontainer-body-content-list-img' alt='이미지 파일 오류!'/>
+                            </div>
+                            <div className='itemcontainer-body-content-list-text'>
+                                <div className='itemcontainer-body-content-list-name'>
+                                    {datas}
+                                </div>
+                            </div>
                         </div>
-
-                        <div className='itemcontainer-body-content-list-text'>
-                            <Link to={`/${datas}`} state={{name: datas, imgsrc: imgsrc}} >
-                                {datas}
-                            </Link>
-                        </div>
+                        </Link>
                     </div>
                 );
             })}

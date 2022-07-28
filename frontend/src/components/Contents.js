@@ -11,11 +11,12 @@ const Contents = () => {
 
     const location = useLocation();
 	const name = location.state.name;
+	const url = location.state.url;
     const imgsrc = location.state.imgsrc;
 
     React.useEffect(() => {
         axios
-		.get(`https://api.genshin.dev/characters/${name}`)
+		.get(`https://api.genshin.dev/${url}/${name}`)
 		.then(response => {
 			//정상적으로 데이터를 불러오면, setData 함수를 이용하여 data 변수에 데이터를 넣는다.
 			setData(response.data);
@@ -28,7 +29,7 @@ const Contents = () => {
 			console.log('Error!');
 			// console.log(Error);
 		});
-    }, [name]);
+    }, [url, name]);
 
     if (error !== false)
     {

@@ -8,17 +8,28 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Mainpage from './pages/Mainpage';
 import Contents from './components/Contents';
 import Loading from './pages/Loading';
+import CharactersInfo from './components/CharactersInfo';
+import WeaponsInfo from './components/WeaponsInfo';
+import Appbar from './components/Appbar';
 
 const App = () => {
 	return (
 		<div className='App'>
 			<BrowserRouter>
-				<Routes>
-					<Route path="/" element={<Mainpage/>}/>
-					<Route path="/:datas" element={<Contents/>}/>
+				<div className='main-outer'>
+					<Appbar/>
 
-					<Route path="/test" element={<Loading/>}/>
-				</Routes>
+					<Routes>
+						<Route path="/" element={<Mainpage/>}/>
+
+						<Route path="/characters" element={<CharactersInfo/>}/>
+						<Route path="/weapons" element={<WeaponsInfo/>}/>
+						<Route path="/:datas" element={<Contents/>}/>
+
+						<Route path="/test" element={<Loading/>}/>
+					</Routes>
+				</div>
+
 			</BrowserRouter>
 		</div>
 	);

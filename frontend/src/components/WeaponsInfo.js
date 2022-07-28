@@ -1,19 +1,20 @@
 import axios from "axios";
 import React, { useState } from "react";
-import "../style/CharactersInfo.css";
+
+import "../style/WeaponsInfo.css";
 
 import Contentsbox from "./Contentsbox";
 
-const CharactersInfo = () => {
+const WeaponsInfo = () => {
 
     const [data, setData] = useState([]);
 	const [error, setError] = useState(false);
 
-    const url = 'characters';
+    const url = 'weapons';
 
     React.useEffect(() => {
         axios
-		.get("https://api.genshin.dev/characters")
+		.get("https://api.genshin.dev/weapons")
 		.then(response => {
 			//정상적으로 데이터를 불러오면, setData 함수를 이용하여 data 변수에 데이터를 넣는다.
 			setData(response.data);
@@ -43,4 +44,4 @@ const CharactersInfo = () => {
     );
 }
 
-export default CharactersInfo;
+export default WeaponsInfo;
