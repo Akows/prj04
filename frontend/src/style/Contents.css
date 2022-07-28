@@ -11,7 +11,7 @@
 
     display: flex;
 
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 .contents-body-imgrarity {
     width: 30%;
@@ -49,7 +49,47 @@
 
     display: flex;
 
-    border: 1px solid black;
+    /* border: 1px solid black; */
+}
+.contents-body-nataff {
+    width: 30%;
+    height: 100%;
+
+    font-family: 'GIfont';
+    font-size: large;
+    font-weight: 500;
+}
+.contents-body-nation {
+    width: 100%;
+    height: 40%;
+}
+.contents-body-imgrarity-nationimg {
+    width: 130px;
+    height: 130px;
+}
+
+.contents-body-affiliation {
+    width: 100%;
+    height: 40%;
+}
+.contents-body-birthday {
+    width: 100%;
+    height: 20%;
+}
+
+.contents-body-desbir {
+    width: 70%;
+    height: 100%;
+
+    font-family: 'GIfont';
+    font-size: large;
+    font-weight: 500;
+}
+.contents-body-description {
+    width: 100%;
+
+    text-align: center;
+    padding: 30px 0;
 }
 
 .contents-body-lower {
@@ -58,5 +98,18 @@
 
     display: flex;
 
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
+
+.contents-body-skill {
+    width: 100%;
+}
+
+.contents-body-passive {
+    width: 100%;
+}
+
+.contents-body-constel {
+    width: 100%;
+}
+

@@ -10,6 +10,11 @@ import star3 from '../assets/Icon_3_Stars.webp';
 import star4 from '../assets/Icon_4_Stars.webp';
 import star5 from '../assets/Icon_5_Stars.webp';
 
+import mondemblem from '../assets/Emblem_Mondstadt.webp';
+import liyueemblem from '../assets/Emblem_Liyue.webp';
+import inazumaemblem from '../assets/Emblem_Inazuma.webp';
+import noraemblem from '../assets/Nora_Emblem.webp';
+
 import bow from '../assets/Icon_Bow.webp';
 import catalyst from '../assets/Icon_Catalyst.webp';
 import claymore from '../assets/Icon_Claymore.webp';
@@ -23,6 +28,7 @@ import electro from '../assets/Element_Electro.svg';
 import hydro from '../assets/Element_Hydro.svg';
 import pyro from '../assets/Element_Pyro.svg';
 import geo from '../assets/Element_Geo.svg';
+import CharactersInfoSkill from './CharactersInfoSkill';
 
 const Contents = () => {
 
@@ -75,6 +81,22 @@ const Contents = () => {
         raritysrc = star5;
     }
 
+    // 소속 이미지 체크
+    var nationsrc = '';
+
+    if (data.nation === 'Mondstadt') {
+        nationsrc = mondemblem;
+    }
+    else if (data.nation === 'Liyue') {
+        nationsrc = liyueemblem;
+    }
+    else if (data.nation === 'Inazuma') {
+        nationsrc = inazumaemblem;
+    }
+    else if (data.name === 'Aloy') {
+        nationsrc = noraemblem;
+    }
+
     // 무기종류 이미지 체크
     var weaponsrc = '';
 
@@ -119,6 +141,9 @@ const Contents = () => {
         visionsrc = geo;
     }
 
+    // const aa = data.skillTalents[0].name;
+
+
     if (url === 'characters')
     {
         return (
@@ -129,22 +154,59 @@ const Contents = () => {
                             <img src={imgsrc} className='contents-body-imgrarity-img' alt='이미지 파일 오류!'/>
                             <img src={raritysrc} className='contents-body-imgrarity-rarityimg'  alt='이미지 파일 오류!'/>
                         </div>
-
                         <div className='contents-body-name'>
                             {data.name} <br/>
                             <img src={visionsrc} className='contents-body-imgrarity-elementimg' alt='이미지 파일 오류!'/>
                             <img src={weaponsrc} className='contents-body-imgrarity-elementimg' alt='이미지 파일 오류!'/>
                         </div>
                     </div>
-
                     <div className='contents-body-middle'>
-                        zz
+                        <div className='contents-body-nataff'>
+                            <div className='contents-body-nation'>
+                                {data.nation}
+                                <img src={nationsrc} className='contents-body-imgrarity-nationimg' alt='이미지 파일 오류!'/>
+                            </div>
+                            <div className='contents-body-affiliation'>
+                                {data.affiliation}
+                            </div>
+                        </div>
+                        <div className='contents-body-desbir'>
+                            <div className='contents-body-description'>
+                                {data.description}
+                            </div>
+                            <div className='contents-body-birthday'>
+                                {data.birthday}
+                            </div>
+                        </div>
                     </div>
-
                     <div className='contents-body-lower'>
-                        zz
-                    </div>
 
+                        <CharactersInfoSkill data={data.skillTalents}/>
+
+                        <div className='contents-body-skill'>
+
+
+                            {/* {data && data.skillTalents.map(datas => {
+                                return (
+                                    <>
+                                        {datas.name}
+                                    </>
+                                );
+                            })} */}
+
+                        </div>
+
+                        <div className='contents-body-passive'>
+
+                        </div>
+
+                        <div className='contents-body-constel'>
+
+                        </div>
+
+
+
+                    </div>
                 </div>
             </>
         );
