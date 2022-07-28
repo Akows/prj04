@@ -28,7 +28,6 @@ import electro from '../assets/Element_Electro.svg';
 import hydro from '../assets/Element_Hydro.svg';
 import pyro from '../assets/Element_Pyro.svg';
 import geo from '../assets/Element_Geo.svg';
-import CharactersInfoSkill from './CharactersInfoSkill';
 
 const Contents = () => {
 
@@ -180,29 +179,50 @@ const Contents = () => {
                         </div>
                     </div>
                     <div className='contents-body-lower'>
+                        {/* <div className='contents-body-skill'>
+                            <div className='contents-body-skill1'>
+                                {JSON.stringify(data.skillTalents[0].name)}
+                            </div>
+                            <div className='contents-body-skill2'>
+                                {JSON.stringify(data.skillTalents[1].name)}
+                            </div>
+                            <div className='contents-body-skill3'>
+                                {JSON.stringify(data.skillTalents[2].name)}
+                            </div>
+                        </div> */}
 
-                        <CharactersInfoSkill data={data.skillTalents}/>
-
-                        <div className='contents-body-skill'>
-
-
-                            {/* {data && data.skillTalents.map(datas => {
-                                return (
-                                    <>
-                                        {datas.name}
-                                    </>
-                                );
-                            })} */}
-
-                        </div>
-
-                        <div className='contents-body-passive'>
-
+                        {/* <div className='contents-body-passive'>
+                            <div className='contents-body-passive1'>
+                                {JSON.stringify(data.passiveTalents[0].name)}
+                            </div>
+                            <div className='contents-body-passive2'>
+                                {JSON.stringify(data.passiveTalents[1].name)}
+                            </div>
+                            <div className='contents-body-passive3'>
+                                {JSON.stringify(data.passiveTalents[2].name)}
+                            </div>
                         </div>
 
                         <div className='contents-body-constel'>
-
-                        </div>
+                            <div className='contents-body-constel1'>
+                                {JSON.stringify(data.constellations[0].name)}
+                            </div>
+                            <div className='contents-body-constel2'>
+                                {JSON.stringify(data.constellations[1].name)}
+                            </div>
+                            <div className='contents-body-constel3'>
+                                {JSON.stringify(data.constellations[2].name)}
+                            </div>
+                            <div className='contents-body-constel4'>
+                                {JSON.stringify(data.constellations[3].name)}
+                            </div>
+                            <div className='contents-body-constel5'>
+                                {JSON.stringify(data.constellations[4].name)}
+                            </div>
+                            <div className='contents-body-constel6'>
+                                {JSON.stringify(data.constellations[5].name)}
+                            </div>
+                        </div> */}
 
 
 

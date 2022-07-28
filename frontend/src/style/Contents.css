@@ -1,6 +1,6 @@
 .contents-body-outer {
     width: 100%;  
-    height: auto; 
+    height: 900px; 
 
     /* border: 1px solid black; */
 }
@@ -96,20 +96,44 @@
     width: 100%;
     height: 40%;
 
-    display: flex;
-
+    display: inline-flex;
+    flex-direction: column;
     /* border: 1px solid black; */
 }
 
 .contents-body-skill {
     width: 100%;
+    height: 33.3%;
+
+    font-family: 'GIfont';
+    font-size: medium;
+    font-weight: 500;
+
+    
+    border: 1px solid black;
 }
+.contents-body-skill1 {
+    width: 100%;
+    height: 33.3%;
+}
+.contents-body-skill2 {
+    width: 100%;    
+    height: 33.3%;
+}
+.contents-body-skill3 {
+    width: 100%;
+    height: 33.3%;
+}
+
+
 
 .contents-body-passive {
     width: 100%;
+    height: 33.3%;
 }
 
 .contents-body-constel {
     width: 100%;
+    height: 33.3%;
 }
 

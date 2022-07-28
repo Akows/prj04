@@ -581,9 +581,9 @@ const Contentsbox = (props) => {
                 imgsrc =wolf_s_gravestone;
 
                 return (
-                    <div className='itemcontainer-body-outer'>
+                    <div className='itemcontainer-body-outer' key={datas}>
                         <Link to={`/${datas}`} state={{name: datas, imgsrc: imgsrc, url: props.url}} >
-                        <div className='itemcontainer-body-content-list' key={datas}>
+                        <div className='itemcontainer-body-content-list'>
                             <div className='itemcontainer-body-content-list-photo'>
                                 <img src={imgsrc} className='itemcontainer-body-content-list-img' alt='이미지 파일 오류!'/>
                             </div>
