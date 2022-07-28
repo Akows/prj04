@@ -1,10 +1,10 @@
 import axios from "axios";
 import React, { useState } from "react";
-import "../style/Contentscontainer.css";
+import "../style/CharactersInfo.css";
 
 import Contentsbox from "./Contentsbox";
 
-const Contentscontainer = () => {
+const CharactersInfo = () => {
 
     const [data, setData] = useState([]);
 	const [error, setError] = useState(false);
@@ -41,4 +41,4 @@ const Contentscontainer = () => {
     );
 }
 
-export default Contentscontainer;
+export default CharactersInfo;

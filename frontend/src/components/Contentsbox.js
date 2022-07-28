@@ -71,6 +71,7 @@ const Contentsbox = (props) => {
                 //         break;
                 // }
 
+                // if-else if문 사용시.
                 if (datas === 'albedo') 
                     imgsrc = albedoimg;
                 else if (datas === 'aloy') 
@@ -169,7 +170,6 @@ const Contentsbox = (props) => {
                     imgsrc = yunjinimg;
                 else if (datas === 'zhongli')
                     imgsrc = zhongliimg;
-
 
                 return (
                     <div className='itemcontainer-body-content-list' key={datas}>

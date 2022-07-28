@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import "../style/Mainpage.css";
 
 import Appbar from '../components/Appbar';
-import Contentscontainer from '../components/Contentscontainer';
+import CharactersInfo from '../components/CharactersInfo';
 import Loading from './Loading';
 
 const Mainpage = () => {
@@ -20,7 +20,7 @@ const Mainpage = () => {
 		(
 			<div className='main-outer'>
 				<Appbar/>
-				<Contentscontainer/>
+				<CharactersInfo/>
 			</div>
 		);
 	}
