@@ -4,10 +4,6 @@ import { useLocation } from "react-router-dom";
 
 import "../style/Contents.css";
 
-import albedoimg from '../assets/Character_Albedo_Thumb.webp';
-import aloyimg from '../assets/Character_Aloy_Thumb.webp';
-import amberimg from '../assets/Character_Amber_Thumb.webp';
-
 const Contents = () => {
 
     const [data, setData] = useState([]);
@@ -15,6 +11,7 @@ const Contents = () => {
 
     const location = useLocation();
 	const name = location.state.name;
+    const imgsrc = location.state.imgsrc;
 
     React.useEffect(() => {
         axios
@@ -38,20 +35,7 @@ const Contents = () => {
         return '에러가 발생하였습니다.';
     }
 
-    var imgsrc = '';
-
-    if (data.name === 'Albedo') {
-        imgsrc = albedoimg;
-    }
-    else if (data.name === 'Aloy') {
-        imgsrc = aloyimg;
-    }
-    else if (data.name === 'Amber') {
-        imgsrc = amberimg;
-    }
-
     var vision = '';
-
 
     if (data.vision === 'Geo') {
         vision = 'G';
