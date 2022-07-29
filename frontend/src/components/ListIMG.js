@@ -38,7 +38,7 @@ const ListIMG = (props) => {
                 setError(true);
                 console.log('Error!');
             });
-    }, []);
+    }, [props.url, props.name]);
 
     if (error !== false)
     {
@@ -48,10 +48,6 @@ const ListIMG = (props) => {
     return (
         <>
             <div className='itemcontainer-body-content-list-img'>
-                {/* <a href={data}></a> */}
-
-                {/* {data} */}
-
                 <img src={data} className='itemcontainer-body-content-list-img' alt='이미지 파일 오류!'/>
             </div>
 
