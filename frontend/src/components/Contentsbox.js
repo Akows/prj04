@@ -188,6 +188,7 @@ import whiteblind from '../assets/Weapon_Whiteblind.webp';
 import windblume_ode from '../assets/Weapon_Windblume_Ode.webp';
 import wine_and_song from '../assets/Weapon_Wine_and_Song.webp';
 import wolf_s_gravestone from '../assets/Weapon_Wolfs_Gravestone.webp';
+import ListIMG from "./ListIMG";
 
 const Contentsbox = (props) => {
 	return (
@@ -585,7 +586,10 @@ const Contentsbox = (props) => {
                         <Link to={`/${datas}`} state={{name: datas, imgsrc: imgsrc, url: props.url}} >
                         <div className='itemcontainer-body-content-list'>
                             <div className='itemcontainer-body-content-list-photo'>
-                                <img src={imgsrc} className='itemcontainer-body-content-list-img' alt='이미지 파일 오류!'/>
+
+                                <ListIMG name={datas} url={props.url}/>
+
+                                {/* <img src={imgsrc} className='itemcontainer-body-content-list-img' alt='이미지 파일 오류!'/> */}
                             </div>
                             <div className='itemcontainer-body-content-list-text'>
                                 <div className='itemcontainer-body-content-list-name'>
