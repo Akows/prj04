@@ -1,7 +1,9 @@
 import axios from "axios";
 import React, { useState } from "react";
 
-const ListIMG = (props) => {
+import "../style/ContentsImg.css";
+
+const ContentsImg = (props) => {
 
     const [data, setData] = useState([]);
 	const [error, setError] = useState(false);
@@ -23,8 +25,15 @@ const ListIMG = (props) => {
 	// 	});
     // }, [props.url, props.name]);
 
+    // weapon에는 big 이미지가 없으므로 icon으로 따로 호출해주어야 함.
+    var imgsize = 'icon-big';
+
+    if (props.url === 'weapons') {
+        imgsize = `icon`;
+    }
+
     React.useEffect(() => {
-        axios.get(`https://api.genshin.dev/${props.url}/${props.name}/icon`, {responseType: 'blob'})
+        axios.get(`https://api.genshin.dev/${props.url}/${props.name}/${imgsize}`, {responseType: 'blob'})
             .then(res => {
                 const myFile = new File([res.data], 'imageName')
                 const reader = new FileReader()
@@ -38,24 +47,17 @@ const ListIMG = (props) => {
                 setError(true);
                 console.log('Error!');
             });
-    }, [props.url, props.name]);
-
+    }, [props.url, props.name, imgsize]);
     if (error !== false)
     {
-        return '에러 발생!.';
+        return '에러 발생!';
     }
 
     return (
         <>
-            <div className='itemcontainer-body-content-list-img'>
-                <img src={data} className='itemcontainer-body-content-list-img' alt='이미지 파일 오류!'/>
-            </div>
-
-            
-            
+            <img src={data} className='contentsimg' alt='이미지 파일 오류!'/>
         </>
-
     );
 }
 
-export default ListIMG;
+export default ContentsImg;
