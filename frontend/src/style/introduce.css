@@ -1,0 +1,30 @@
+.introduce-outer {
+    width: 100%;
+    height: 750px;
+
+    animation: fadeUp 2s;
+}
+
+.introduce-upper {
+    margin-top: 100px;
+
+    font-family: 'GIfont';
+    font-size: xx-large;
+    font-weight: bolder;
+}
+
+.introduce-middle {
+    margin-top: 50px;
+
+    font-family: 'GIfont';
+    font-size: x-large;
+    font-weight: bolder;
+}
+
+.introduce-lower {
+    margin-top: 50px;
+
+    font-family: 'GIfont';
+    font-size: xx-large;
+    font-weight: bolder;
+}

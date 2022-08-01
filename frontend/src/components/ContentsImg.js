@@ -21,7 +21,7 @@ import wavebreakers_fin from '../assets/Weapon_Wavebreakers_Fin.webp';
 const ContentsImg = (props) => {
 
     const [data, setData] = useState([]);
-    const [error, setError] = useState(false);
+    // const [error, setError] = useState(false);
 
     // API 호출시 고화질 이미지를 불러오는 경로는 icon-big, 그런데 무기 이미지에는 저화질 icon 경로만 존재함. 
     // 따라서 url을 판별하여 무기 이미지는 저화질 이미지를 불러와주어야하므로 imgsize 변수와 if문을 이용하여 경로를 변경하도록 함.
@@ -85,10 +85,10 @@ const ContentsImg = (props) => {
     }, [props.url, props.name, imgsize]);
 
     // 에러가 발생할 경우 '에러 발생' 문구만 화면에 띄워주기. 
-    if (error !== false)
-    {
-        return '에러가 발생하였습니다.';
-    }
+    // if (error !== false)
+    // {
+    //     return '에러가 발생하였습니다.';
+    // }
 
     return (
         <Link to={`/${props.name}`} state={{name: props.name, imgsrc: data, url: props.url}} >

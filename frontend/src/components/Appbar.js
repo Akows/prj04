@@ -11,9 +11,11 @@ const Appbar = () => {
 
             <div className='appbar-head-upper'>
                 <div className='appbar-head-upper-menubtu'>
+                    <Link to="/introduce">
                     <button className='appbar-head-upper-button'>
                         <img src={menuimg} alt={'이미지 오류!'} className='appbar-head-upper-buttonimg' />
                     </button>
+                    </Link>
                 </div>
                 <div className='appbar-head-upper-apptitle'>
                     <Link to="/">

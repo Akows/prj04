@@ -11,6 +11,7 @@ import Loading from './pages/Loading';
 import CharactersInfo from './components/CharactersInfo';
 import WeaponsInfo from './components/WeaponsInfo';
 import Appbar from './components/Appbar';
+import Introduce from './pages/Introduce';
 
 const App = () => {
 	return (
@@ -21,15 +22,13 @@ const App = () => {
 
 					<Routes>
 						<Route path="/" element={<Mainpage/>}/>
-
 						<Route path="/characters" element={<CharactersInfo/>}/>
 						<Route path="/weapons" element={<WeaponsInfo/>}/>
 						<Route path="/:datas" element={<Contents/>}/>
-
-						<Route path="/test" element={<Loading/>}/>
+						<Route path="/introduce" element={<Introduce/>}/>
+						<Route path="/loading" element={<Loading/>}/>
 					</Routes>
 				</div>
-
 			</BrowserRouter>
 		</div>
 	);
