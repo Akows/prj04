@@ -8,35 +8,24 @@
     align-items: center;
     flex-direction: column;
 
-    background-color: #FAC8C8;
-    opacity: 0.9;
+    background-image: url("../assets/Loading.png");
+    background-size: 2400px 1400px;
+    background-repeat: no-repeat;
+    background-position: -900px -100px;
 }
-    /* 로딩 이미지 영역 설정 */
-    /* 로딩 이미지 영역 설정 */
-    .loading-imgdiv {
-        width: 100%;
-        height: 35%;
 
-        margin-top: 400px;
-    }
-        /* 로딩 이미지 설정 */
-        /* 로딩 이미지 설정 */
-        .loading-img {
-            width: 100%;
-            height: 100%;
+/* 로딩 문구 영역 설정 */
+/* 로딩 문구 영역 설정 */
+.loading-text {
+    width: 100%;
+    height: 50%;
 
-            animation: fadeUp 2s;
-        }
+    margin-top: 700px;
 
-    /* 로딩 문구 영역 설정 */
-    /* 로딩 문구 영역 설정 */
-    .loading-text {
-        width: 100%;
-        height: 50%;
+    color: white;
+    font-family: 'GIfont';
+    font-size: xx-large;
+    font-weight: 500;
 
-        margin-top: 100px;
-
-        font-family: 'GIfont';
-        font-size: xx-large;
-        font-weight: 700;
-    }
+    animation: fadeUp 2s;
+}

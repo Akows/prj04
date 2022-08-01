@@ -28,11 +28,13 @@ import electro from '../assets/Element_Electro.svg';
 import hydro from '../assets/Element_Hydro.svg';
 import pyro from '../assets/Element_Pyro.svg';
 import geo from '../assets/Element_Geo.svg';
+import Loading from '../pages/Loading';
 
 const Contents = () => {
 
     const [data, setData] = useState([]);
-	const [error, setError] = useState(false);
+    const [error, setError] = useState(false);
+    const [loading, setLoading] = useState(true);
 
     const location = useLocation();
 	const name = location.state.name;
@@ -45,6 +47,7 @@ const Contents = () => {
 		.then(response => {
 			//정상적으로 데이터를 불러오면, setData 함수를 이용하여 data 변수에 데이터를 넣는다.
 			setData(response.data);
+            setLoading(false);
 			console.log('Complete!');
             // console.log(response.data);
 		})
@@ -59,6 +62,11 @@ const Contents = () => {
     if (error !== false)
     {
         return '에러가 발생하였습니다.';
+    }
+
+    if (loading !== false)
+    {
+        return <Loading/>;
     }
 
     // 등급 이미지 체크
@@ -140,9 +148,6 @@ const Contents = () => {
         visionsrc = geo;
     }
 
-    // const aa = data.skillTalents[0].name;
-
-
     if (url === 'characters')
     {
         return (
@@ -223,9 +228,6 @@ const Contents = () => {
                                 {JSON.stringify(data.constellations[5].name)}
                             </div>
                         </div> */}
-
-
-
                     </div>
                 </div>
             </>
@@ -248,20 +250,22 @@ const Contents = () => {
                             <img src={weaponsrc} className='contents-body-imgrarity-elementimg' alt='이미지 파일 오류!'/>
                         </div>
                     </div>
-
                     <div className='contents-body-middle'>
-                        zz
+                        <div className='contents-body-bsssmem'>
+                            baseAttack : {data.baseAttack} <br/><br/>
+                            subStat : <br/> {data.subStat} <br/><br/>
+                        </div>
+                        <div className='contents-body-desbir'>
+                            <div className='contents-body-description'>
+                                {data.passiveName} <br/><br/>
+                                {data.passiveDesc}
+                            </div>
+                        </div>
                     </div>
-
-                    <div className='contents-body-lower'>
-                        zz
-                    </div>
-
                 </div>
             </>
         );
     }
-
 }
 
 export default Contents;

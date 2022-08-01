@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useState } from "react";
+import Loading from "../pages/Loading";
 
 import "../style/WeaponsInfo.css";
 
@@ -9,6 +10,7 @@ const WeaponsInfo = () => {
 
     const [data, setData] = useState([]);
 	const [error, setError] = useState(false);
+    const [loading, setLoading] = useState(true);
 
     const url = 'weapons';
 
@@ -18,6 +20,7 @@ const WeaponsInfo = () => {
 		.then(response => {
 			//정상적으로 데이터를 불러오면, setData 함수를 이용하여 data 변수에 데이터를 넣는다.
 			setData(response.data);
+            setLoading(false);
 			console.log('setData Complete!');
             // console.log(response.data);
 		})
@@ -33,6 +36,11 @@ const WeaponsInfo = () => {
     if (error !== false)
     {
         return '에러가 발생하였습니다.';
+    }
+
+    if (loading !== false)
+    {
+        return <Loading/>;
     }
 
     return (

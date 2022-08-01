@@ -37,16 +37,4 @@
         margin-top: 50px;
     }
 
-    /* 본문 리스트 포토 영역 설정 */
-    /* 본문 리스트 포토 영역 설정 */
-    .itemcontainer-body-content-list-photo {
-        width: 30%;  
-        height: 95%;
 
-        margin: 3px;
-
-        border-radius: 0px 40px 40px 0px;
-
-        background-color: bisque;
-        border: 1px solid black;
-    }
