@@ -19,10 +19,8 @@
 ### 2. 개발환경.
 
 ##### OS : MS Window 10 Pro
-##### IDE : IntelliJ IDEA Community Edition 2022.1
-##### Backend : Spring Framework, myBatis, Tomcat
+##### IDE : Visual Studio Code 1.69.2
 ##### Frontend : React 16.12.0
-##### DateBase : MariaDB 10.6.7 / MySQL Workbench 8.0 CE
 ##### Web Browser : Google Chrome
 
 # 미완성 프로젝트, 아직 진행 중인 프로젝트입니다.
