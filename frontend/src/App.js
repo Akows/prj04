@@ -13,6 +13,8 @@ import WeaponsInfo from './components/WeaponsInfo';
 import Appbar from './components/Appbar';
 import Introduce from './pages/Introduce';
 
+import Test from './test/InfiniteScrollPage';
+
 const App = () => {
 	return (
 		<div className='App'>
@@ -27,6 +29,8 @@ const App = () => {
 						<Route path="/:datas" element={<Contents/>}/>
 						<Route path="/introduce" element={<Introduce/>}/>
 						<Route path="/loading" element={<Loading/>}/>
+
+						<Route path="/test" element={<Test/>}/>
 					</Routes>
 				</div>
 			</BrowserRouter>
