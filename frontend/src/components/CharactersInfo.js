@@ -14,7 +14,7 @@ const CharactersInfo = () => {
     const url = 'characters';
 
     let startNum = 0;
-    let endNum = 5;
+    let endNum = 8;
 
     const readData = () => {
         axios
@@ -22,7 +22,10 @@ const CharactersInfo = () => {
 		.then(response => {
             // 정상적으로 데이터를 불러오면, setData 함수를 이용하여 data 변수에 데이터를 넣는다.
             // 무한 스크롤 기능 구현을 위해 setData가 실행될 때 모든 데이터를 다 사용하지 않는다.
-            setData(response.data.slice(startNum, endNum));
+            const newData = [];
+            response.data.slice(startNum, endNum).forEach(element => { newData.push(element); });
+            setData((oldData => [...oldData, ...newData]));
+            console.log(newData);
             setLoading(false);
             setError(false);
 		})
@@ -31,10 +34,9 @@ const CharactersInfo = () => {
 			setError(true);
 			console.log('Character setData Error!');
 		});
-        endNum += 3;
     };
 
-    const handleScroll = (event) => {
+    const handleScrollCharacter = (event) => {
         // // 스크롤 바의 위치 (최상단 지점)
         // console.log('top : ', event.target.documentElement.scrollTop);
         // // 실제 내부 픽셀의 길이
@@ -43,13 +45,15 @@ const CharactersInfo = () => {
         // console.log('height : ', event.target.documentElement.scrollHeight);
 
         if (window.innerHeight + event.target.documentElement.scrollTop + 1 >= event.target.documentElement.scrollHeight) {
+            startNum = endNum;
+            endNum = startNum + 4;
             readData();
         }
     };
 
     React.useEffect(() => {
         readData();
-        window.addEventListener('scroll', handleScroll);
+        window.addEventListener('scroll', handleScrollCharacter);
     }, []);
 
     // 에러가 발생할 경우 '에러 발생' 문구만 화면에 띄워주기. 
