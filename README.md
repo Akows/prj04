@@ -6,5 +6,3 @@
 
 ##### 깃 페이지 주소 : https://akows.github.io/prj04build/
 ##### 프로젝트 소개 : https://www.notion.so/c172897bfba94563bd88fa30e2b0c40d
-
-# ! 미완성 프로젝트, 아직 진행 중인 프로젝트입니다.
