@@ -54,7 +54,7 @@ const WeaponsInfo = () => {
 
     React.useEffect(() => {
         readData();
-        window.addEventListener('scroll', handleScrollWeapon);
+        window.addEventListener('scroll', handleScrollWeapon); // eslint-disable-next-line
     }, []);
 
     // 에러가 발생할 경우 '에러 발생' 문구만 화면에 띄워주기. 

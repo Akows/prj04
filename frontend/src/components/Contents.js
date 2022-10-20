@@ -37,9 +37,9 @@ const Contents = () => {
     const [loading, setLoading] = useState(true);
 
     const location = useLocation();
-	const name = location.state.name;
-	const url = location.state.url;
-    const imgsrc = location.state.imgsrc;
+	const name = location.state?.name;
+	const url = location.state?.url;
+    const imgsrc = location.state?.imgsrc;
 
     React.useEffect(() => {
         axios
