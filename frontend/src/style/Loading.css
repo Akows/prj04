@@ -1,17 +1,16 @@
 /* 로딩 화면 영역 설정 */
 /* 로딩 화면 영역 설정 */
 .loading-outer {
-    width: 600px;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
 
     display: inline-flex;
     align-items: center;
     flex-direction: column;
 
     background-image: url("../assets/Loading.png");
-    background-size: 2400px 1400px;
-    background-repeat: no-repeat;
-    background-position: -900px -100px;
+    background-size: cover;
+    background-position: 0px 150px;
 }
 
 /* 로딩 문구 영역 설정 */

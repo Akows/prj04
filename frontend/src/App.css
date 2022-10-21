@@ -40,7 +40,7 @@
 /* 전체 영역 설정 */
 /* 전체 영역 설정 */
 .main-outer {
-  width: 600px;
+  width: 100vw;
   height: auto;
 
   display: inline-flex;
@@ -50,4 +50,19 @@
   border-radius: 20px;
 
   border: 2px solid black;
+}
+
+@media ( min-width: 800px ) {
+  .main-outer {
+    width: 600px;
+    height: auto;
+  
+    display: inline-flex;
+    align-items: center;
+    flex-direction: column;
+  
+    border-radius: 20px;
+  
+    border: 2px solid black;
+  }
 }
