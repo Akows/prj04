@@ -19,7 +19,7 @@
 }
 .contents-body-imgrarity-img {
     width: 90%;
-    height: 170px;
+    height: 100%;
 
     border-radius: 10px;
 }
@@ -156,3 +156,8 @@
     height: 33.3%;
 }
 
+@media ( min-width: 800px ) {
+    .contents-body-imgrarity-img {
+
+    }
+}

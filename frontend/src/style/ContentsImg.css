@@ -14,7 +14,13 @@
 
     .contentsimg-image {
         width: 135px;
-        height: 143px;
+        height: 100%;
 
         margin-right: 30px;
+    }
+
+    @media ( min-width: 800px ) {
+        .contentsimg-image {
+
+        }
     }

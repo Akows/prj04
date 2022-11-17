@@ -93,7 +93,7 @@ const ContentsImg = (props) => {
     return (
         <Link to={`/${props.name}`} state={{name: props.name, imgsrc: data, url: props.url}} >
             <div className='contentsimg-photo'>
-                <img src={data} className='contentsimg-image' alt='이미지 파일 오류!'/>
+                <img src={data} className='contentsimg-image' alt=''/>
             </div>
         </Link>
     );

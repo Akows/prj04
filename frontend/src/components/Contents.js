@@ -155,20 +155,20 @@ const Contents = () => {
                 <div className='contents-body-outer'>
                     <div className='contents-body-upper'>
                         <div className='contents-body-imgrarity'>
-                            <img src={imgsrc} className='contents-body-imgrarity-img' alt='이미지 파일 오류!'/>
-                            <img src={raritysrc} className='contents-body-imgrarity-rarityimg'  alt='이미지 파일 오류!'/>
+                            <img src={imgsrc} className='contents-body-imgrarity-img' alt=''/>
+                            <img src={raritysrc} className='contents-body-imgrarity-rarityimg'  alt=''/>
                         </div>
                         <div className='contents-body-name'>
                             {data.name} <br/>
-                            <img src={visionsrc} className='contents-body-imgrarity-elementimg' alt='이미지 파일 오류!'/>
-                            <img src={weaponsrc} className='contents-body-imgrarity-elementimg' alt='이미지 파일 오류!'/>
+                            <img src={visionsrc} className='contents-body-imgrarity-elementimg' alt=''/>
+                            <img src={weaponsrc} className='contents-body-imgrarity-elementimg' alt=''/>
                         </div>
                     </div>
                     <div className='contents-body-middle'>
                         <div className='contents-body-nataff'>
                             <div className='contents-body-nation'>
                                 {data.nation}
-                                <img src={nationsrc} className='contents-body-imgrarity-nationimg' alt='이미지 파일 오류!'/>
+                                <img src={nationsrc} className='contents-body-imgrarity-nationimg' alt=''/>
                             </div>
                             <div className='contents-body-affiliation'>
                                 {data.affiliation}
@@ -241,13 +241,13 @@ const Contents = () => {
                 <div className='contents-body-outer'>
                     <div className='contents-body-upper'>
                         <div className='contents-body-imgrarity'>
-                            <img src={imgsrc} className='contents-body-imgrarity-img' alt='이미지 파일 오류!'/>
-                            <img src={raritysrc} className='contents-body-imgrarity-rarityimg'  alt='이미지 파일 오류!'/>
+                            <img src={imgsrc} className='contents-body-imgrarity-img' alt=''/>
+                            <img src={raritysrc} className='contents-body-imgrarity-rarityimg'  alt=''/>
                         </div>
 
                         <div className='contents-body-name'>
                             {data.name} <br/>
-                            <img src={weaponsrc} className='contents-body-imgrarity-elementimg' alt='이미지 파일 오류!'/>
+                            <img src={weaponsrc} className='contents-body-imgrarity-elementimg' alt=''/>
                         </div>
                     </div>
                     <div className='contents-body-middle'>
