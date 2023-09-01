@@ -10,7 +10,7 @@
 
 ## 👍프로젝트 소개 페이지
 
-[🔗Link](https://www.notion.so/Lee-Yuseung-6f40078f4a3340a1955b62cf823e4b9a?pvs=4#6a55d849d3a14f9e80c599e3e9657435)
+- `Notion` [🔗Link](https://www.notion.so/Lee-Yuseung-6f40078f4a3340a1955b62cf823e4b9a?pvs=4#6a55d849d3a14f9e80c599e3e9657435)
 
 ### ✔️ 배포
 
