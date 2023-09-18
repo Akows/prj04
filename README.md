@@ -77,4 +77,33 @@ $ npm run start
 
 ```bash
 src
+ ┣ assets
+ ┣ components
+ ┃ ┣ Appbar.js
+ ┃ ┣ CharactersInfo.js
+ ┃ ┣ Contents.js
+ ┃ ┣ ContentsImg.js
+ ┃ ┣ Contentsbox.js
+ ┃ ┣ WeaponsInfo.js
+ ┣ pages
+ ┃ ┣ Introduce.js
+ ┃ ┣ Loading.js
+ ┃ ┣ Mainpage.js
+ ┣ style
+ ┃ ┗ Appbar.css
+ ┃ ┗ CharactersInfo.css
+ ┃ ┗ Contents.css
+ ┃ ┗ ContentsImg.css
+ ┃ ┗ Contentsbox.css
+ ┃ ┗ Loading.css
+ ┃ ┗ PublicCSS.css
+ ┃ ┗ WeaponsInfo.css
+ ┃ ┗ introduce.css
+ ┣ App.css
+ ┣ App.js
+ ┣ App.test.js
+ ┣ index.css
+ ┣ index.js
+ ┣ reportWebVitals.js
+ ┗ setupTests.js
 ```
